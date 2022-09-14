@@ -16,6 +16,10 @@
 　　・sampleのロボットを使いたいなら、[Webots User Guide, Robots](https://cyberbotics.com/doc/guide/robots?version=R2022a)を見ればわかる。<br>
 　・.protoファイルが、Webotsでのモデル記述ファイル（ROSでいうURDFと同じ）。<br>
 　　・恐らく、ロボットのjointやらは全て.protoファイルに記述されている。そこを見れば全パラメータがわかる。<br>
+　
+　・では、multirobot_launch.pyでの各ロボットのcontrollerは何処？sampleのパスには、launch - resource - worldsしかなかった。
+　　・controllerは、パッケージ名（webots_ros2_universal_robot）と同じフォルダ名の可能性？（tutorialのmy_package然り）
+　　・
 
 ## ROS2関連の調査記録
 
