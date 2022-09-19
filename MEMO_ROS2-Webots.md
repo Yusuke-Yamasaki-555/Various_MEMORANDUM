@@ -1,6 +1,6 @@
 # Webots＆ROS2連携に関するメモ
 (RobotisOp2のwalk-controllerのソースコードに、色々コメントをつけてある) <br>
-
+<br>
 ## Path
 ### sampleのパス
 /opt/ros/foxy/share/webots_ros2_universal_robot/ <br>
@@ -8,7 +8,7 @@
 /usr/local/webots/ <br>
 ### Webots既存のロボットモデル（.protoファイル）のパス
 /usr/local/webots/projects/robots/ <br>
-
+<br>
 ## Webots & ROS2連携方法調査記録
 [公式Wiki(ちゃんと読もう！)](https://github.com/cyberbotics/webots_ros2/wiki/Tutorial-Creating-a-Custom-Cpp-Plugin) <br>
 （参考例：webots_ros2_universal_robot/）<br>
@@ -20,8 +20,10 @@
    ・URDFのほうには、jointをprotoに合わせるだけでいい感じ？センサ類もwebots側にあるから、それをURDFが合わせるだけで良さそう？ <br>
 　・では、multirobot_launch.pyでの各ロボットのcontrollerは何処？sampleのパスには、launch - resource - worldsしかなかった。 <br>
 　　・controllerは、パッケージ名（webots_ros2_universal_robot）と同じフォルダ名の可能性？（tutorialのmy_package然り） <br>
-　　・
-
+　　・[GitHubのソース](https://github.com/cyberbotics/webots_ros2/tree/master/webots_ros2_universal_robot)でわかるじゃん <br>
+　・連携のコードにおいて、Pythonでの関数やらライブラリはソースを読めばわかるが、C++は？ <br>
+　　・公式Wiki(上記)をあさりたまえよ <br>
+<br>
 ## ROS2関連の調査記録
 
 ## Webots関連の調査記録
