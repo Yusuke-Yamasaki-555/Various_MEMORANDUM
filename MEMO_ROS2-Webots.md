@@ -23,6 +23,7 @@
 　　・[GitHubのソース](https://github.com/cyberbotics/webots_ros2/tree/master/webots_ros2_universal_robot)でわかるじゃん <br>
 　・連携のコードにおいて、Pythonでの関数やらライブラリはソースを読めばわかるが、C++は？ <br>
 　　・公式Wiki(上記)をあさりたまえよ <br>
+     ・全部、全部書いてあった。後はサンプルコードにコメントを一つずつ付けていきたいね。<br>
 <br>
 ## ROS2関連の調査記録
 
