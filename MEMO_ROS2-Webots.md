@@ -24,7 +24,13 @@
 　・連携のコードにおいて、Pythonでの関数やらライブラリはソースを読めばわかるが、C++は？ <br>
 　　・公式Wiki(上記)をあさりたまえよ <br>
      ・全部、全部書いてあった。後はサンプルコードにコメントを一つずつ付けていきたいね。<br>
+・universal_robotについて<br>
+　・`follow_joint_trajectory_client.py`でactionの内容を記述している。importされる。classだけを提供するコード。<br>
+　・`abb(or ur5e)_controller.py`でrobotのコントロール（座標(point)やjointの名前をメッセージの要素に入れている。恐らく配列）をしている。処理内容というよりパラメータを記述している。ここにactionのclient口も書かれており、処理内容は`follow_joint_trajectory_clinet.py`のクラスをimportすることで対処している。<br>
+　・使うロボットに関してはLaunchでURDFやパラメータを記述したyamlを指定しているはず。<br>
+　・URDFの`~_description.urdf`では、ロボットの名前は最初に宣言されているのみである。そのため、controlはここを読んでいるのかもしれない。Wikiの方にも書かれていたが、使うロボットの名前をパラメータに記述するときは元のと同じにしてね的なことが書かれていたから、そういうことなんだと思う。（要調査）<br>
 <br>
+
 ## ROS2関連の調査記録
 
 ## Webots関連の調査記録
