@@ -30,6 +30,11 @@
 　・使うロボットに関してはLaunchでURDFやパラメータを記述したyamlを指定しているはず。<br>
 　・URDFの`~_description.urdf`では、ロボットの名前は最初に宣言されているのみである。そのため、controlはここを読んでいるのかもしれない。Wikiの方にも書かれていたが、使うロボットの名前をパラメータに記述するときは元のと同じにしてね的なことが書かれていたから、そういうことなんだと思う。（要調査）<br>
 <br>
+<br>
+・#include <webots/Node.hpp>、#include <webots/Supervisor.hpp>が重要。この２つからWebotsのAPIにアクセスする。これはwebots_nodeから提供される。<br>
+　・Cppの場合、webots_ros2_driver::PluginInterfaceを継承するなど、Wikiにあるように設定すれば使える（はず）。<br>
+・teslaのサンプルの場合、自動車用のAPIを使っている。<br>
+・ROBOTIS_OP2を使う場合、RotationalMotorやAccelerometer、PositionSensorなどのロボットが搭載している機能に対応したAPI（API名まんま）を呼び出して使えば良いだろう。([ROBOTIS' Robotis OP2: Reference](https://cyberbotics.com/doc/guide/robotis-op2?version=R2022a))<br>
 
 ## ROS2関連の調査記録
 
