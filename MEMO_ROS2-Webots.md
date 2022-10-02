@@ -1,5 +1,7 @@
 # Webots＆ROS2連携に関するメモ
-(RobotisOp2のwalk-controllerのソースコードに、色々コメントをつけてある) <br>
+調査対象：[cyberbotics/webots_ros2](https://github.com/cyberbotics/webots_ros2)<br>
+参考：[cyberbotics/webots_ros2,Wiki](https://github.com/cyberbotics/webots_ros2/wiki)<br>
+　　　[Webots,Documentation](https://cyberbotics.com/doc/reference/index)<br>
 <br>
 ## Path
 ### sampleのパス
