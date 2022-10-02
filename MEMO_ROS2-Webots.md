@@ -1,7 +1,7 @@
 # Webots＆ROS2連携に関するメモ
 調査対象：[cyberbotics/webots_ros2](https://github.com/cyberbotics/webots_ros2)<br>
 参考：[cyberbotics/webots_ros2,Wiki](https://github.com/cyberbotics/webots_ros2/wiki)<br>
-　　　[Webots,Documentation](https://cyberbotics.com/doc/reference/index)<br>
+　　　[Webots Reference Manual](https://cyberbotics.com/doc/reference/index)<br>
 <br>
 ## Path
 ### sampleのパス
