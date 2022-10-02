@@ -39,7 +39,9 @@
 ・teslaのサンプルの場合、自動車用のAPIを使っている。<br>
 ・ROBOTIS_OP2を使う場合、RotationalMotorやAccelerometer、PositionSensorなどのロボットが搭載している機能に対応したAPI（API名まんま）を呼び出して使えば良いだろう。([ROBOTIS' Robotis OP2: Reference](https://cyberbotics.com/doc/guide/robotis-op2?version=R2022a))<br>
 ・いまわかってないのは、URDFでの<joint>内で宣言されている<state_interface>と<command_interface>の決め方。positionだけじゃなく角速度とかもほしい。<br>
-
+　・これはpositionを微分してやれば良いのでは？となるとWebotsからシミュレーション内時間を得る必要がある。ROS2連携によるリアルタイム性も関係してくる（はず）。<br>
+<br>
+   
 ## ROS2関連の調査記録
 
 ## Webots関連の調査記録
