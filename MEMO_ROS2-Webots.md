@@ -52,6 +52,8 @@
 ## Webots関連の調査記録
 ・`#include <webots/Device.hpp>`について<br>
 　・PositionSensorとかは上記のヘッダーファイルをincludeすることで使えるようになるのか。<br>
+→・というより、引数にあるnodeポインタがWebotsNodeからのやつだから、そこからnode.robotでWebots::Robotが使える。ということは、node.~でRobot以外も行けるのではないだろうか。<br>
+　　・Webots::Robotは、Robotが持つ情報（motorとかsensor）をほとんど持っており、情報を得る窓口となっていそう。（参考：[Robot.hpp](https://github.com/cyberbotics/webots/blob/master/include/controller/cpp/webots/Robot.hpp), [Robot.cpp]](https://github.com/cyberbotics/webots/blob/master/src/controller/cpp/Robot.cpp)）<br>
 
 ## その他の調査記録
 ・コード内にある"future"関数は、C++やPythonに標準で搭載されている関数である。どちらも、非同期処理を実現するためのクラスとなっている。[このプログラム](https://demura.net/education/lecture/21725.html)では、**Futureが実行されているときは、サーバーからのレスポンスをチェックし、レスポンスがあったらその内容を端末に表示する。**としている。sesrviceとかの非同期処理に使われ、特にserviceだとclient側で使用されているのが見られる。[このプログラム](https://qiita.com/NeK/items/9d15487d4853638394a3#%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%A0callback%E9%96%A2%E6%95%B0%E3%81%AB%E3%82%88%E3%82%8Btimer%E5%87%A6%E7%90%86%E3%81%A8%E9%9D%9E%E5%90%8C%E6%9C%9F%E5%87%A6%E7%90%86)だと、ROS風な記述で用いたspin系関数である"spin_until_future_complete"の代わりのところに使われている。<br>
