@@ -41,6 +41,7 @@
 ・いまわかってないのは、URDFでの<joint>内で宣言されている<state_interface>と<command_interface>の決め方。positionだけじゃなく角速度とかもほしい。<br>
 　・これはpositionを微分してやれば良いのでは？となるとWebotsからシミュレーション内時間を得る必要がある。ROS2連携によるリアルタイム性も関係してくる（はず）。<br>
 ・Webots::Robotが使えるということだが、加速度センサやPositionSensorはどう使うのか？Webots::Motorみたいに使えるのか？demoのドローンのやつみたいに、URDFにデバイスを書いてそこからアクセス？IMUであればwebots_ros2が提供しているやつが使える気がする。<br>
+　・[これ](https://cyberbotics.com/doc/guide/controller-programming?tab-language=c++#using-actuators)とdemoのドローンのドライバを比較すると、Webots::Motorをincludeせずともget~が出来てる？なら別でWebots::Motorをincludeする必要ないって感じ？<br>
 ・**どんなモデルを使うのかによって、欲しいデータが変わる。そこがまず必要**<br>
 <br>
    
@@ -57,7 +58,7 @@
 →・というより、引数にあるnodeポインタがWebotsNodeからのやつだから、そこからnode.robotでWebots::Robotが使える。ということは、node.~でRobot以外も行けるのではないだろうか。<br>
 　　・Webots::Robotは、Robotが持つ情報（motorとかsensor）をほとんど持っており、情報を得る窓口となっていそう。（参考：[Robot.hpp](https://github.com/cyberbotics/webots/blob/master/include/controller/cpp/webots/Robot.hpp), [Robot.cpp]](https://github.com/cyberbotics/webots/blob/master/src/controller/cpp/Robot.cpp)）<br>
 ・SuperVisorについて<br>
-　・ロボットの各関節の座標（？）をSuperVisorから取得できそう？<br>
+　・ロボットの各関節の座標（？）をSuperVisorから取得できそう？([SuperVisor_Document](https://cyberbotics.com/doc/guide/supervisor-programming?tab-language=c++))<br>
 　・**SuperVisorとNodeの機能を必要十分に把握する必要がある**<br>
 
 ## その他の調査記録
