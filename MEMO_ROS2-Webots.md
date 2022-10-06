@@ -56,7 +56,7 @@
 ・`#include <webots/Device.hpp>`について<br>
 　・PositionSensorとかは上記のヘッダーファイルをincludeすることで使えるようになるのか。<br>
 →・というより、引数にあるnodeポインタがWebotsNodeからのやつだから、そこからnode.robotでWebots::Robotが使える。ということは、node.~でRobot以外も行けるのではないだろうか。<br>
-　　・Webots::Robotは、Robotが持つ情報（motorとかsensor）をほとんど持っており、情報を得る窓口となっていそう。（参考：[Robot.hpp](https://github.com/cyberbotics/webots/blob/master/include/controller/cpp/webots/Robot.hpp), [Robot.cpp]](https://github.com/cyberbotics/webots/blob/master/src/controller/cpp/Robot.cpp)）<br>
+　　・Webots::Robotは、Robotが持つ情報（motorとかsensor）をほとんど持っており、情報を得る窓口となっていそう。（参考：[Robot.hpp](https://github.com/cyberbotics/webots/blob/master/include/controller/cpp/webots/Robot.hpp), [Robot.cpp](https://github.com/cyberbotics/webots/blob/master/src/controller/cpp/Robot.cpp)）<br>
 ・SuperVisorについて<br>
 　・ロボットの各関節の座標（？）をSuperVisorから取得できそう？([SuperVisor_Document](https://cyberbotics.com/doc/guide/supervisor-programming?tab-language=c++))<br>
 　・**SuperVisorとNodeの機能を必要十分に把握する必要がある**<br>
